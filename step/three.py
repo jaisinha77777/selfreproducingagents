@@ -40,3 +40,7 @@ with torch.no_grad():
         correct += (output.argmax(1) == target).sum().item()
 
 print(f'Accuracy: {100*correct/len(test_data):.2f}%')
+
+# Save model
+torch.save(model.state_dict(), 'model_3layer.pkl')
+print('Model saved to model_3layer.pkl')
